@@ -24,7 +24,7 @@ const ArticleDetail = () => {
             <p className="text-gray-800 text-sm mb-10">{article.description}</p>
 
             <div className="flex justify-between items-center mb-4">
-                <h2 className="text-lg font-bold text-black">Comments</h2>
+                <h2 className="text-lg font-bold text-black">Comentarios</h2>
                 <a
                     href="#"
                     className="text-sm text-[#E10600] font-semibold hover:underline"
