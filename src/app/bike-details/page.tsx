@@ -89,10 +89,10 @@ const MotoDetalle = () => {
                     </div>
 
                     <div className="flex justify-end items-start gap-x-3">
-                        <button className="bg-[#f07373] text-white font-semibold py-2 px-14 rounded-full shadow-md hover:bg-[#e25f5f] transition">
+                        <button className="bg-[#f07373] text-white font-semibold py-2 px-14 rounded-full shadow-md hover:bg-[#e25f5f] transition hover:cursor-pointer">
                             Ver Página Oficial
                         </button>
-                        <button className="bg-white text-[#f07373] font-semibold py-2 px-14 rounded-full border border-[#f07373] shadow-md hover:bg-[#ffe5e5] transition">
+                        <button className="bg-white text-[#f07373] font-semibold py-2 px-14 rounded-full border border-[#f07373] shadow-md hover:bg-[#ffe5e5] transition hover:cursor-pointer">
                             Comentar
                         </button>
                     </div>

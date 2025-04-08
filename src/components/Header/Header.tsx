@@ -1,6 +1,12 @@
+"use client"
+import { useRouter } from 'next/navigation';
 import React from 'react';
+import './Header.css';
 
 const Header: React.FC<HeaderProps> = ({ isLoggedIn }) => {
+    const router = useRouter();
+
+
     return (
         <header className="bg-zinc-900 text-white py-3 px-6 shadow-md flex items-center justify-between">
             <div className="flex items-center">
@@ -9,10 +15,10 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn }) => {
 
             <div className="flex items-center gap-x-6">
                 <nav className="flex space-x-6 text-sm font-medium">
-                    <a href="#" className="hover:text-red-500 transition">Inicio</a>
-                    <a href="#" className="hover:text-red-500 transition">Motos</a>
-                    <a href="#" className="hover:text-red-500 transition">Foro</a>
-                    <a href="#" className="hover:text-red-500 transition">Contáctenos</a>
+                    <a href="/" className="hover:text-red-500 transition">Inicio</a>
+                    <a href="/bike-grid" className="hover:text-red-500 transition">Motos</a>
+                    <a href="/foro" className="hover:text-red-500 transition">Foro</a>
+                    <a href="/contacts" className="hover:text-red-500 transition">Contáctenos</a>
                     {isLoggedIn && (
                         <a href="#" className="hover:text-red-500 transition">Mi perfil</a>
                     )}
@@ -25,13 +31,13 @@ const Header: React.FC<HeaderProps> = ({ isLoggedIn }) => {
                             <img src="/storage/icon/log-out.svg" alt="Cerrar sesión" className="w-4 h-4" />
                         </button>
                     ) : (
-                        <button className="border border-red-500 text-red-500 px-3 py-1 rounded-full hover:bg-red-600 hover:text-white transition">
+                        <button onClick={(): void => { router.push('/login') }} className="border border-red-500 text-red-500 px-3 py-1 rounded-full hover:bg-red-600 hover:text-white transition cursor-pointer">
                             Iniciar Sesión
                         </button>
                     )}
                 </div>
             </div>
-        </header>
+        </header >
     );
 };
 

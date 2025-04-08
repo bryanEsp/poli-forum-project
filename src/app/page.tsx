@@ -3,8 +3,10 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Paginator from '@/components/Paginator/Paginator';
 import DealershipMap from '@/components/DealershipMap/DealershipMap';
+import { useRouter } from 'next/navigation';
 
 const Home = () => {
+  const router = useRouter();
   const [index, setIndex] = useState(5);
 
   return (
@@ -68,7 +70,7 @@ const Home = () => {
                 src="/storage/img/motos/moto1.svg"
                 className="w-full max-w-md h-auto object-contain"
               />
-              <button className="bg-red-600 text-white mt-6 px-8 py-2 rounded-full hover:bg-red-700 transition">
+              <button onClick={(): void => { router.push('/bike-details') }} className="bg-red-600 text-white mt-6 px-8 py-2 rounded-full hover:bg-red-700 transition hover:cursor-pointer">
                 Ver más
               </button>
             </div>
@@ -118,6 +120,7 @@ const Home = () => {
                       ★★★★★
                     </div>
                     <button
+                      onClick={(): void => { router.push('/bike-details') }}
                       className="mt-2 underline hover:text-xl hover:cursor-pointer"
                       style={{
                         color: '#EF5350',
@@ -179,7 +182,7 @@ const Home = () => {
                   deserunt mollit anim id est laborum.
                 </p>
 
-                <button className="bg-red-400 text-white mt-4 px-24 py-1 rounded-full hover:bg-red-700 transition-all float-right">
+                <button onClick={(): void => { router.push('/article') }} className="bg-red-400 text-white mt-4 px-24 py-1 rounded-full hover:bg-red-700 transition-all float-right hover:cursor-pointer">
                   Ver más
                 </button>
               </div>
@@ -192,7 +195,7 @@ const Home = () => {
           <div className="max-w-6xl mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-8"
               style={{ fontFamily: "'Bebas Neue', sans-serif", color: '#455A64' }}
-              >CONCESIONARIOS</h2>
+            >CONCESIONARIOS</h2>
             <div className="mb-4 text-sm">
               <label htmlFor="marca" className="block mb-1">Seleccione tipo de concesionario:</label>
               <select id="marca" className="p-2 border rounded w-full md:w-1/3">
