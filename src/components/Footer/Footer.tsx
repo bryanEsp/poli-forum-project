@@ -9,11 +9,11 @@ const Footer: React.FC = () => {
                     <p className="mb-2">Servicios:</p>
                     <div className="flex items-center gap-2 mb-1">
                         <img src="/storage/icon/message.svg" className="w-8 h-8" />
-                        <a href="mailto:forum@forum.co" className="hover:text-red-400">forum@forum.co</a>
+                        <a href="mailto:forum@forum.co" className="hover:text-red-400">forum@poli.edu.co</a>
                     </div>
                     <div className="flex items-center gap-2">
                         <img src="/storage/icon/phone.svg" className="w-8 h-8" />
-                        <span>3546546546</span>
+                        <span>1234567891011</span>
                     </div>
                 </div>
 
